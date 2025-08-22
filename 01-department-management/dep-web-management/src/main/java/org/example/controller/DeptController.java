@@ -1,6 +1,7 @@
 package org.example.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.example.anno.Log;
 import org.example.pojo.Dept;
 import org.example.pojo.Result;
 import org.example.service.DeptService;
@@ -45,6 +46,7 @@ public class DeptController {
     }*/
     //方式三 参数一致时即前端传进的形参和后端定义的形参一致，可以去掉注解@RequestParam
     @DeleteMapping("/depts")
+    @Log
     public Result deleteBuId(Integer id){
         System.out.println("删除id为"+ id +"的数据");
         deptService.deleteById(id);
@@ -55,6 +57,7 @@ public class DeptController {
 *  增加部门
 * */
     @PostMapping("/depts")
+    @Log
     public Result add(@RequestBody Dept dept){
         System.out.println("增加部门为："+dept);
         deptService.add(dept);
@@ -78,6 +81,7 @@ public class DeptController {
     *  修改部门
     * */
     @PutMapping("/depts")
+    @Log
     public Result update(@RequestBody Dept dept){
         System.out.println("修改部门:"+dept);
         deptService.update(dept);
