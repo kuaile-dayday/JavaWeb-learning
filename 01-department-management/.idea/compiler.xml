@@ -17,6 +17,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-aop-quickstart" />
+        <module name="springboot-web-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="22" />
@@ -25,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="dep-web-management" options="-parameters" />
       <module name="springboot-aop-quickstart" options="-parameters" />
+      <module name="springboot-web-config" options="-parameters" />
     </option>
   </component>
 </project>
