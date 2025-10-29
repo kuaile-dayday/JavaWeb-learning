@@ -29,7 +29,7 @@ public class EmpController {
     * */
     @GetMapping
     public Result page(EmpQueryParam empQueryParam) {
-        log.info("分页查询：｛｝",empQueryParam);
+        log.info("分页查询：{}",empQueryParam);
         PageResult<Emp> pageResult = empService.page(empQueryParam);
 
         return Result.success(pageResult);
@@ -40,7 +40,7 @@ public class EmpController {
     * */
     @PostMapping
     public Result save(@RequestBody Emp emp) {
-        log.info("新增员工信息为：｛｝",emp);
+        log.info("新增员工信息为：{}",emp);
         empService.save(emp);
         return Result.success();
 
@@ -60,7 +60,7 @@ public class EmpController {
      * */
     @DeleteMapping
     public Result delete(@RequestParam List<Integer> ids) {
-        log.info("要删除的员工信息为：｛｝", ids);
+        log.info("要删除的员工信息为：{}", ids);
         empService.delete(ids);
 
         return Result.success();

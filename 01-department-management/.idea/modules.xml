@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01-department-management.iml" filepath="$PROJECT_DIR$/01-department-management.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-aop-quickstart/springboot-aop-quickstart.iml" filepath="$PROJECT_DIR$/springboot-aop-quickstart/springboot-aop-quickstart.iml" />
     </modules>
   </component>
 </project>
