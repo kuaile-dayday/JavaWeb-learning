@@ -89,8 +89,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         employee.setCreateTime(LocalDateTime.now());
         employee.setUpdateTime(LocalDateTime.now());
 //        设置当前记录创建人id和修改人id
-        employee.setCreateUser(BaseContext.getCurrentId());
-        employee.setUpdateUser(BaseContext.getCurrentId());
+//        employee.setCreateUser(BaseContext.getCurrentId());
+//        employee.setUpdateUser(BaseContext.getCurrentId());
         employeeMapper.insert(employee);
 
 
@@ -123,8 +123,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee emp = new Employee();
         emp.setId(id);
         emp.setStatus(status);
-        emp.setUpdateTime(LocalDateTime.now());
-        emp.setUpdateUser(BaseContext.getCurrentId());
+//        emp.setUpdateTime(LocalDateTime.now());
+//        emp.setUpdateUser(BaseContext.getCurrentId());
 
         employeeMapper.update(emp);
 
@@ -151,8 +151,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         // 将原始密码设置回emp对象，避免被"****"覆盖
         emp.setPassword(originalEmployee.getPassword());
 
-        emp.setUpdateTime(LocalDateTime.now());
-        emp.setUpdateUser(BaseContext.getCurrentId());
+        // AutoFill 已为公共字段赋值
+//        emp.setUpdateTime(LocalDateTime.now());
+//        emp.setUpdateUser(BaseContext.getCurrentId());
         employeeMapper.update(emp);
     }
 
