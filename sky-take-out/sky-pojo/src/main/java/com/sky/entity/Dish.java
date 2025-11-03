@@ -46,5 +46,8 @@ public class Dish implements Serializable {
     private Long createUser;
 
     private Long updateUser;
+//
+//    //    封装菜品分类名称
+//    private String categoryName;
 
 }
