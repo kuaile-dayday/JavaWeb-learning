@@ -31,4 +31,14 @@ public interface OrderMapper {
      */
     void update(Orders orders);
 
+    /*
+    * 分页条件查询并按下单时间排序
+    * */
+    Page<Orders> pageQuery(OrdersPageQueryDTO ordersPageQueryDTO);
+
+    /*
+    * 根据id查询订单
+    * */
+    @Select("select * from orders where id=#{id}")
+    Orders getById(Long id);
 }
